@@ -14,10 +14,13 @@
       <h1>MEANie</h1>
       <p>Where my Peeps?</p>
       <div ng-controller="WhereMyPeeps as wmp">
-        <input type="text" value="" ng-model="nameIn" placeholder="Name">
+        <input type="text" value="" ng-model="wmp.nameIn" placeholder="Name">
         <input type="text" value="" ng-model="wmp.locationIn" placeholder="Location">
         <button ng-click="wmp.newPeep()">Add</button>
         <button ng-click="wmp.whereMyPeepsAt()">Read</button>
+        <div ng-repeat="peeps in wmp.returnedPeeps">
+          <p>{{ peeps.name }} {{ peeps.location }}</p>
+        </div>
       </div>
     </div>
   </body>

@@ -3,7 +3,7 @@ myApp.service('PeepsService', function($http) {
 
   sv.addPeep = function(newPeep) {
     console.log('in addRecord:', newPeep);
-    $.http({
+    $http({
       method: 'POST',
       url: '/peeps',
       data: newPeep
