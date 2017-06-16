@@ -19,7 +19,7 @@
         <button ng-click="wmp.newPeep()">Add</button>
         <button ng-click="wmp.whereMyPeepsAt()">Read</button>
         <div ng-repeat="peeps in wmp.returnedPeeps">
-          <p>{{ peeps.name }} {{ peeps.location }}</p>
+          <p ng-model="peeps._id" ><button ng-click="wmp.deletePeep(peeps._id)" >Delete</button> {{ peeps.name }} {{ peeps.location }}</p>
         </div>
       </div>
     </div>
